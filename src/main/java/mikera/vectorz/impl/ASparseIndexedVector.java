@@ -111,7 +111,7 @@ public abstract class ASparseIndexedVector extends ASparseVector {
 	}
 	
 	@Override
-	public final double dotProduct(AVector v) {
+	public double dotProduct(AVector v) {
 		if (v instanceof ADenseArrayVector) return dotProduct((ADenseArrayVector)v);
 		if (v instanceof ASparseVector) return dotProduct((ASparseVector)v);
 		

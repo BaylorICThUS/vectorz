@@ -8,6 +8,8 @@ import mikera.vectorz.impl.SparseIndexedVector;
 import mikera.vectorz.impl.ZeroVector;
 import mikera.vectorz.impl.ASparseVector;
 
+import mikera.indexz.Index;
+
 import org.junit.Test;
 
 public class TestSparseVectors {
@@ -22,7 +24,16 @@ public class TestSparseVectors {
 		assertEquals(1,v.nonZeroCount());
 		
 	}
-	
+	@Test
+	public void testFixedValueSparseIndexedVector(){
+		Index id = Index.create(new int[]{1,4,5,6,9});
+		FixedValueSparseIndexedVector fviv = new FixedValueSparseIndexedVector(99,id);
+		assertEquals(5,fviv.nonZeroCount());
+		assertEquals(5.0,fviv.elementSum(),0.0);
+		AVector v = Vector.of(1, 1,1,1,2, 3, 4,1,1,2, 5);
+		assertEquals(12,fviv.dotProduct(v),0.0);
+
+	}
 	@Test 
 	public void testIndexed() {
 		SparseIndexedVector v=SparseIndexedVector.createLength(10);

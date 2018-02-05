@@ -56,6 +56,10 @@ public class SparseIndexedVector extends ASparseIndexedVector {
 		this.data = data;
 	}
 
+	public void add(int i){
+
+	}
+
 	private SparseIndexedVector(int length, Index index, AVector source) {
 		this(length, index, source.toDoubleArray());
 	}
