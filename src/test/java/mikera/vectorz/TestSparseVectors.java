@@ -7,6 +7,7 @@ import mikera.vectorz.impl.SparseHashedVector;
 import mikera.vectorz.impl.SparseIndexedVector;
 import mikera.vectorz.impl.ZeroVector;
 import mikera.vectorz.impl.ASparseVector;
+import mikera.vectorz.impl.FixedValueSparseIndexedVector;
 
 import mikera.indexz.Index;
 
